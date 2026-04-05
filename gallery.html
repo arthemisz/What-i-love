@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Space Odyssey</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+    .filter-btn {
+      padding: 7px 18px;
+      font-family: var(--font-d);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      color: var(--gold);
+      border-color: var(--border-lit);
+      background: var(--gold-dim);
+    }
+    .gallery-item.featured {
+      grid-column: span 2;
+      aspect-ratio: 2 / 1;
+    }
+    @media (max-width: 1024px) {
+      .gallery-item.featured { grid-column: span 1; aspect-ratio: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Space Odyssey</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Gallery</p>
+    <span class="eyebrow" style="justify-content:center;">
+      <i class="fa fa-images" style="font-size:0.55rem;"></i> Visual Journey
+    </span>
+    <h1 class="grad-text" style="margin-top:1rem;">The Space Gallery</h1>
+    <p style="color:var(--text-muted); max-width:550px; margin:0.8rem auto 0; font-size:1rem;">
+      A CSS art tour of the cosmos — planets, nebulae, black holes, and beyond. Every piece is pure CSS gradients.
+    </p>
+  </header>
+
+  <section class="section" id="gallery">
+
+    <div class="filter-bar">
+      <button class="filter-btn active">All Objects</button>
+      <button class="filter-btn">Planets</button>
+      <button class="filter-btn">Nebulae</button>
+      <button class="filter-btn">Galaxies</button>
+      <button class="filter-btn">Phenomena</button>
+    </div>
+
+    <!-- CSS Grid gallery -->
+    <div class="gallery-grid">
+
+      <!-- Featured: spans 2 columns -->
+      <div class="gallery-item featured black-hole">
+        <div class="gallery-caption">
+          <h3>M87* — The First Black Hole Photographed</h3>
+          <p>Located 55 million light-years away. Imaged by the Event Horizon Telescope, 2019.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item planet-mars">
+        <div class="gallery-caption">
+          <h3>Mars — The Red Planet</h3>
+          <p>Valles Marineris stretches 4,000 km across the surface.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item nebula-pillars">
+        <div class="gallery-caption">
+          <h3>Pillars of Creation</h3>
+          <p>Towering gas columns in the Eagle Nebula, 6,500 light-years away.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item planet-saturn">
+        <div class="gallery-caption">
+          <h3>Saturn — Lord of the Rings</h3>
+          <p>Rings spanning 282,000 km but only about 10 metres thick.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item galaxy-milky">
+        <div class="gallery-caption">
+          <h3>Milky Way Galactic Core</h3>
+          <p>200–400 billion stars, spanning 100,000 light-years.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item planet-jupiter">
+        <div class="gallery-caption">
+          <h3>Jupiter — The Giant</h3>
+          <p>The Great Red Spot is a storm raging for over 350 years.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item aurora">
+        <div class="gallery-caption">
+          <h3>Aurora Borealis</h3>
+          <p>Solar wind colliding with Earth's atmosphere. Nature's light show.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item nebula-orion">
+        <div class="gallery-caption">
+          <h3>Orion Nebula</h3>
+          <p>A stellar nursery 1,344 light-years away. New stars forming.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item supernova">
+        <div class="gallery-caption">
+          <h3>Supernova Remnant</h3>
+          <p>When massive stars die, they explode with the energy of billions of suns.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item planet-earth">
+        <div class="gallery-caption">
+          <h3>Earth — The Pale Blue Dot</h3>
+          <p>From 6 billion km away, it's just a pixel of light.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item galaxy-cluster">
+        <div class="gallery-caption">
+          <h3>Galaxy Cluster</h3>
+          <p>Hundreds of galaxies, each billions of stars, bound by gravity.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:3rem; color:var(--text-muted); font-size:0.88rem;">
+      <i class="fa fa-palette" style="color:var(--gold); margin-right:6px;"></i>
+      All gallery visuals are pure CSS gradient art — no images or JavaScript.
+    </p>
+  </section>
+
+  <!-- INFO CARDS -->
+  <section class="section-wide band">
+    <div class="inner">
+      <div class="section-header">
+        <span class="eyebrow"><i class="fa fa-star" style="font-size:0.55rem;"></i> Did You Know</span>
+        <h2 class="grad-text">Behind These Objects</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🕳️</div>
+          <h3>Black Holes</h3>
+          <p>M87*'s mass equals 6.5 billion suns. Light itself cannot escape once it crosses the event horizon.</p>
+          <a href="#gallery" style="font-size:0.85rem; color:var(--blue); margin-top:0.5rem; display:inline-block;">View in gallery ↑</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">💫</div>
+          <h3>Nebulae</h3>
+          <p>The Pillars of Creation have been partially destroyed by a supernova — the light just hasn't reached us yet.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🪐</div>
+          <h3>Gas Giants</h3>
+          <p>Jupiter and Saturn have no solid surface. If you fell into Jupiter, you'd be compressed until you were part of the planet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="social-links">
+        <a href="https://www.nasa.gov" target="_blank" title="NASA"><i class="fa fa-globe"></i></a>
+        <a href="https://github.com"   target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Space Odyssey — Built with HTML &amp; CSS Only</p>
+    </div>
+  </footer>
+
+</body>
+</html>
