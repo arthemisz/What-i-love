@@ -4,13 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Space Odyssey — What I Love</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <audio autoplay loop muted>
+    <source src="audio/music.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="hero-audio" loop>
+  <source src="https://www.example.com/path/to/space-theme.mp3" type="audio/mpeg">
+<iframe width="1" height="1" scrolling="no" frameborder="no" allow="autoplay"
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1425923881&auto_play=true">
+</iframe>
+</audio>
 
   <nav class="site-nav">
     <div class="nav-inner">
@@ -27,14 +37,20 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-orb"></div>
+    <!-- VIDEO -->
+
+     <video autoplay muted loop playsinline class="hero-video">
+          <source src="images/rocket.mp4" type="video/mp4">
+        </video>
     <div class="hero-content">
+     
       <span class="eyebrow">
         <i class="fa fa-star" style="font-size:0.55rem;"></i> What I Love
       </span>
       <h1 class="grad-text">Exploring<br/>The Cosmos</h1>
       <p class="subtitle">
         There are more stars in the universe than grains of sand on every beach on Earth.
-        That thought keeps me up at night — and I love it.
+        How can it be explored then? The only answer is expansion. The more we learn about space, the more we realize we’re mostly clueless. About 95% of the universe is made of what scientists call Dark Matter and Dark Energy — and we’ve never directly seen either of them.
       </p>
       <div class="hero-btns">
         <a href="#why-space" class="btn btn-primary">Discover More</a>
@@ -62,7 +78,7 @@
     </div>
     <div class="cards">
       <div class="card">
-        <div class="card-icon">🔭</div>
+        <div class="card-icon"><img src="./images/Telescope.png" alt="Telescope"></div>
         <h3>Infinite Scale</h3>
         <p>The observable universe spans 93 billion light-years. Every time I grasp that scale, my brain does a happy reboot. Nothing puts earthly problems in perspective quite like a Hubble deep-field photo.</p>
       </div>
@@ -72,7 +88,7 @@
         <p>Dark matter makes up 27% of the universe and we have no idea what it is. Space is a canvas of unanswered questions that keep science honest and thrilling.</p>
       </div>
       <div class="card">
-        <div class="card-icon">🚀</div>
+        <div class="card-icon"><img src="./images/ambition.png" > </div>
         <h3>Human Ambition</h3>
         <p>From Apollo's lunar footprints to James Webb photographing galaxies 13 billion years ago — space exploration is humanity at its most courageous and creative.</p>
       </div>
@@ -119,11 +135,11 @@
         <ul class="styled-ul">
           <li>The sheer scale destroys all ego</li>
           <li>It forces humanity to cooperate</li>
-          <li>Every Hubble photo is pure art</li>
-          <li>The science is elegant and ruthless</li>
-          <li>Possibility of other life out there</li>
+          <li>Every Hubble photo is pure art, Truly huge vast art</article></li>
+          <li>The science is elegant and ruthless just as a simple sneeze and it's enough you are carbonized</li>
+          <li>Possibility of other life out there krang </li>
           <li>Rockets are the coolest machines ever built</li>
-          <li>It makes philosophy actually useful</li>
+          <li>It makes philosophy actually useful You see the philosophy in action</li>
         </ul>
       </div>
       <div style="flex:1; min-width:280px;">
