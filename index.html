@@ -17,9 +17,14 @@
   </audio>
   <audio id="hero-audio" loop>
   <source src="https://www.example.com/path/to/space-theme.mp3" type="audio/mpeg">
-<iframe width="1" height="1" scrolling="no" frameborder="no" allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1425923881&auto_play=true">
-</iframe>
+<script>
+const audio = document.getElementById("bg-music");
+
+document.addEventListener("click", () => {
+  audio.muted = false;
+  audio.play();
+}, { once: true });
+</script>
 </audio>
 
   <nav class="site-nav">
